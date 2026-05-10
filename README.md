@@ -1,4 +1,3 @@
-# app-integrity-scanner
 # App Integrity Scanner
 
 A lightweight Windows security tool that scans installed applications, generates SHA-256 hashes, and monitors for unexpected file changes.
