@@ -15,18 +15,18 @@ HEADERS = {
 }
 
 SCAN_DIRS = [
-    "C:\\Program Files",
+    "C:\\Program'[/] Files",
     "C:\\Program Files (x86)",
 ]
 
 def hash_file(path):
     h = hashlib.sha256()
     with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(8192), b""):
+        for chunk in iter(lambda: f.read(8192), b""):     
             h.update(chunk)
     return h.hexdigest()
 
-def check_reputation(sha256, app_name):
+def check_reputation(sha256, app_name): 
     url = f"{SUPABASE_URL}/rest/v1/hash_reputation?sha256=eq.{sha256}"
     response = requests.get(url, headers=HEADERS)
     data = response.json()
